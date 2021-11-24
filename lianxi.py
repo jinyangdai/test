@@ -1,0 +1,33 @@
+import numpy as np
+import pandas as pd
+from matplotlib import pyplot as plt
+print(np.empty(shape=(3,3)))
+print(np.eye(3))
+print(np.identity(3))
+print(np.ones(shape=(2,4)))
+print(np.zeros(shape=(3,3)))
+print(np.full(shape=(3,3),fill_value=2))
+print(np.array([1,2,3]))
+print(np.arange(start = 1,stop = 10,step = 2))
+print(np.linspace(start = 1,stop = 10,num = 5))
+print(np.diag([1,2,3,4]))
+print(np.diag([[1,2,3],[4,5,6],[7,8,9]]))
+print(np.tri(3,5))
+print(np.tril([[1,2,3],[4,5,6],[7,8,9]],-1))
+print(np.triu([[1,2,3],[4,5,6],[7,8,9]],-1))
+a = np.array([[1,2,3],[4,5,6],[7,8,9]])
+print(a)
+print(np.amin(a,axis=0))
+a = {'a':[1,2,3],'b':['a','b','c'],'c':["a","b","c"]}
+df_a = pd.DataFrame(a)
+print(df_a)
+df = pd.DataFrame({'性别':['男','女','男','女','男','女','男','男'],'成绩':['98','93','70','56','67','64','89','87'],'年龄':['15','14','15','12','13','14','15','16']})
+print(df)
+x = np.arange(0,6.28,0.1)
+y = np.sin(x)
+plt.figure()
+plt.plot(x,y)
+plt.figure()
+plt.plot(x,y,ls = '-.',lw = 4,c = 'black')
+
+plt.show()
